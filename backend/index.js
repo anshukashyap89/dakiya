@@ -8,7 +8,9 @@ import cors from "cors"
 import userRouter from "./routes/user.routes.js"
 import messageRouter from "./routes/message.routes.js"
 import { app, server } from "./socket/socket.js"
+import dns from 'dns'
 
+dns.setServers(["1.1.1.1", "8.8.8.8"])
 const port=process.env.PORT || 5000
 
 
